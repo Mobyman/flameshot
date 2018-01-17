@@ -78,9 +78,10 @@ CaptureWidget::CaptureWidget(const uint id, const QString &forcedSavePath,
 
     // set base config of the widget
 #ifdef Q_OS_WIN
-    setWindowFlags(Qt::WindowStaysOnTopHint
+    setWindowFlags(Qt::BypassWindowManagerHint
+                   | Qt::WindowStaysOnTopHint
                    | Qt::FramelessWindowHint
-                   | Qt::Tool);
+                   | Qt::Popup);
 #else
     setWindowFlags(Qt::BypassWindowManagerHint
                    | Qt::WindowStaysOnTopHint

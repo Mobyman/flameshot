@@ -33,7 +33,12 @@
 
 ConfigWindow::ConfigWindow(QWidget *parent) : QTabWidget(parent) {
     setAttribute(Qt::WA_DeleteOnClose);
+<<<<<<< HEAD
     setMinimumSize(450, 490);
+=======
+    const int size = CaptureButton::buttonBaseSize() * 12;
+    setMinimumSize(size, size);
+>>>>>>> 71b63dcd6a0144f29e30d727ea9195f81d73d9ef
     setWindowIcon(QIcon(":img/flameshot.png"));
     setWindowTitle(tr("Configuration"));
 
@@ -56,17 +61,17 @@ ConfigWindow::ConfigWindow(QWidget *parent) : QTabWidget(parent) {
     // visuals
     m_visuals = new VisualsEditor();
     addTab(m_visuals, QIcon(modifier + "graphics.png"),
-		   tr("Interface"));
+           tr("Interface"));
 
     // filename
     m_filenameEditor = new FileNameEditor();
-	addTab(m_filenameEditor, QIcon(modifier + "name_edition.png"),
-		   tr("Filename Editor"));
+    addTab(m_filenameEditor, QIcon(modifier + "name_edition.png"),
+           tr("Filename Editor"));
 
     // general
     m_generalConfig = new GeneneralConf();
-	addTab(m_generalConfig, QIcon(modifier + "config.png"),
-		   tr("General"));
+    addTab(m_generalConfig, QIcon(modifier + "config.png"),
+           tr("General"));
 
     // ftp
     m_ftpConfig = new FtpConfig();

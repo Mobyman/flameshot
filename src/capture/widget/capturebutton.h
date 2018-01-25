@@ -15,8 +15,7 @@
 //     You should have received a copy of the GNU General Public License
 //     along with Flameshot.  If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef BUTTON_H
-#define BUTTON_H
+#pragma once
 
 #include <QPushButton>
 #include <QMap>
@@ -56,7 +55,7 @@ public:
     CaptureButton() = delete;
     explicit CaptureButton(const ButtonType, QWidget *parent = nullptr);
 
-    static size_t buttonBaseSize();
+    static int buttonBaseSize();
     static bool iconIsWhiteByColor(const QColor &);
     static QString globalStyleSheet();
     static QVector<CaptureButton::ButtonType> getIterableButtonTypes();
@@ -90,7 +89,6 @@ private:
     static QColor m_mainColor;
 
     void initButton();
+    void updateIcon();
 
 };
-
-#endif // BUTTON_H

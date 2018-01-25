@@ -187,7 +187,6 @@ static std::map<CaptureButton::ButtonType, int> buttonTypeOrder {
     { CaptureButton::TYPE_RECTANGLE,          4 },
     { CaptureButton::TYPE_CIRCLE,             5 },
     { CaptureButton::TYPE_MARKER,             6 },
-<<<<<<< HEAD
 	{ CaptureButton::TYPE_SELECTIONINDICATOR, 8 },
 	{ CaptureButton::TYPE_MOVESELECTION,      9 },
 	{ CaptureButton::TYPE_UNDO,              10 },
@@ -198,17 +197,6 @@ static std::map<CaptureButton::ButtonType, int> buttonTypeOrder {
 	{ CaptureButton::TYPE_OPEN_APP,          15 },
 	{ CaptureButton::TYPE_BLUR,              7  },
     { CaptureButton::TYPE_IMAGEFTPUPLOADER,  16 },
-=======
-    { CaptureButton::TYPE_SELECTIONINDICATOR, 8 },
-    { CaptureButton::TYPE_MOVESELECTION,      9 },
-    { CaptureButton::TYPE_UNDO,              10 },
-    { CaptureButton::TYPE_COPY,              11 },
-    { CaptureButton::TYPE_SAVE,              12 },
-    { CaptureButton::TYPE_EXIT,              13 },
-    { CaptureButton::TYPE_IMAGEUPLOADER,     14 },
-    { CaptureButton::TYPE_OPEN_APP,          15 },
-    { CaptureButton::TYPE_BLUR,              7  },
->>>>>>> 71b63dcd6a0144f29e30d727ea9195f81d73d9ef
 };
 
 int CaptureButton::getPriorityByButton(CaptureButton::ButtonType b) {

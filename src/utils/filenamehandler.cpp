@@ -21,6 +21,7 @@
 #include <locale>
 #include <QStandardPaths>
 #include <QDir>
+#include <QDateTime>
 
 FileNameHandler::FileNameHandler(QObject *parent) : QObject(parent) {
     std::locale::global(std::locale(""));
@@ -84,7 +85,9 @@ QString FileNameHandler::getRandom(const int length)
    QString random;
    for(int i = 0; i < length; ++i)
    {
-       int index = qrand() % chars.length();
+       srand((unsigned)time(NULL));
+
+       int index = rand() % chars.length();
        QChar nextChar = chars.at(index);
        random.append(nextChar);
    }

@@ -82,9 +82,10 @@ QString FileNameHandler::getRandom(const int length)
    const QString chars("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
 
    QString random;
+   srand((unsigned)time(NULL));
+
    for(int i = 0; i < length; ++i)
    {
-       srand((unsigned)time(NULL));
 
        int index = rand() % chars.length();
        QChar nextChar = chars.at(index);
